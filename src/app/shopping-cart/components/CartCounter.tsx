@@ -1,9 +1,14 @@
 'use client'
 import { useState } from "react";
 
-export const CartCounter = () => {
+interface Props {
+  value?: number;
+}
 
-  const [count, setCount] = useState(5);
+
+export const CartCounter = ({ value = 0 }) => {
+
+  const [count, setCount] = useState(value);
 
   return (
     <>
